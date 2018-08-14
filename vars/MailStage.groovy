@@ -1,3 +1,5 @@
+import vars.dockerCheck
+
 def call(Closure body) {
     stage ('Send Email') {
         def config = [:]
@@ -5,7 +7,7 @@ def call(Closure body) {
         body.delegate = config
         body()
 
-        if("${config.Response}".equals("HTTP/1.1 200")) {
+        if(Response.equals("HTTP/1.1 200")) {
             emailext(subject: "${env.JOB_NAME} was " + "${BUILD_STATUS}", body: "Commit short hash " + "${shortCommit}", to: "${config.Recipient}", replyTo: '');
         }else {
             System.exit(1)
