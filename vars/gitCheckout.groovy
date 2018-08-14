@@ -6,6 +6,7 @@ def call (Closure body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
         body()
+        
         checkout([$class: 'GitSCM',
             branches: [[name: "${config.BranchName}"]],
             doGenerateSubmoduleConfigurations: config.SubmoduleConfig,
