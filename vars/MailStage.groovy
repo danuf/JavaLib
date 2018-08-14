@@ -1,5 +1,5 @@
 def call(Closure body) {
-    stage ('Send Email')
+    stage ('Send Email') {
         def config = [:]
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
