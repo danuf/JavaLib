@@ -13,6 +13,7 @@ import com.lab.build.Colorizer
  * @version $Id: $
  * @copyright 2018, EPAM systems, All Rights Reserved
  */
+
 def call(Closure body) {
     stage ('Execute Maven') {
         def config = [:]
