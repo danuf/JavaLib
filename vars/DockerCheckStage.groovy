@@ -5,7 +5,7 @@ def call (Closure body) {
         body.delegate = config
         body()
         def Response
-        timeout (time: "${config.TimeOutCheck}", unit:'SECONDS') { 
+        timeout (time: config.TimeOutCheck, unit:'SECONDS') { 
             echo 'Check Successful docker container Up'
             sleep 10
             while(Response!="HTTP/1.1 200") {
