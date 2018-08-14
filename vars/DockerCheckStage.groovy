@@ -10,7 +10,7 @@ def call (Closure body) {
             sleep 10
             while(response!="HTTP/1.1 200") {
                 def curl = "curl -I ${config.ApplicationIP}".execute().text
-                response = Curl[0..11]
+                response = curl[0..11]
 		println response
             }    
         }
