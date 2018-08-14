@@ -1,3 +1,5 @@
+// describe parameters here
+
 def call (Closure body) {
     stage ('SonarQube Scan') {
         def config = [:]
