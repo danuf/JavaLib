@@ -11,5 +11,6 @@ def call (Closure body) {
         submoduleCfg: [],
         userRemoteConfigs: [[credentialsId: "${config.CredentialsID}" , url: "${config.GitRepository}" ]]
     ])
+	config.shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:\'%h\'").trim()
     }
 }
