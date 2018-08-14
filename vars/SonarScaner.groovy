@@ -1,4 +1,3 @@
-// describe parameters here
 /*
 @param SonarName //SonarQube Server installation (Jenkins Config System)
 @param SonarJome // SonarScanner installation (Jenkins Global Tool Config )
@@ -9,7 +8,6 @@
 
 
 */
-
 def call (Closure body) {
     stage ('SonarQube Scan') {
         def config = [:]
