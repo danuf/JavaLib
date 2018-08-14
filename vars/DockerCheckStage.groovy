@@ -1,7 +1,7 @@
 import com.lab.build.Colorizer
 
 /**
- * stageCreateVM
+ * stageDockerCheck
  *
  * Check docker availability
  *
