@@ -5,9 +5,8 @@
 @param SonarProj //Project name on SonarQube Server
 @param Sonarbinaries //path to binaries
 @param SonarSourse //path to src/
-
-
 */
+
 def call (Closure body) {
     stage ('SonarQube Scan') {
         def config = [:]
