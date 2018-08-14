@@ -4,10 +4,7 @@ def call (Closure body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
         body()
-    }
-}
-
-    checkout([$class: 'GitSCM',
+        checkout([$class: 'GitSCM',
         branches: [[name: "${config.BranchName}"]],
         doGenerateSubmoduleConfigurations: "${config.SubmoduleConfig}",
         extensions: [],
@@ -15,3 +12,5 @@ def call (Closure body) {
         userRemoteConfigs: [[credentialsId: "${config.CredentialsID}" , url: "${config.GitRepository}" ]]
     ])
 println "${config.BranchName}"
+    }
+}
