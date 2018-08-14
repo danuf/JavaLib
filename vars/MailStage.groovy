@@ -1,6 +1,6 @@
-response = DockerCheckStage{}
 def call(Closure body) {
     stage ('Send Email') {
+	def response = DockerCheckStage {}
         def config = [:]
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
