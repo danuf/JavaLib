@@ -6,7 +6,7 @@ def call (Closure body) {
         body()
         checkout([$class: 'GitSCM',
         branches: [[name: "${config.BranchName}"]],
-        doGenerateSubmoduleConfigurations: "${config.SubmoduleConfig}",
+        doGenerateSubmoduleConfigurations: config.SubmoduleConfig,
         extensions: [],
         submoduleCfg: [],
         userRemoteConfigs: [[credentialsId: "${config.CredentialsID}" , url: "${config.GitRepository}" ]]
