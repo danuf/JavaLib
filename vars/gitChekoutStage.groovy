@@ -12,3 +12,4 @@ def call (Closure body) {
         extensions: [],
         submoduleCfg: [],
         userRemoteConfigs: [[credentialsId: "${config.CredentialsID}" , url: "${config.GitRepository}" ]]])
+pintln "${config.BranchName}"
