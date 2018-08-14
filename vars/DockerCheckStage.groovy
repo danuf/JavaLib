@@ -11,6 +11,7 @@ def call (Closure body) {
             while(Response!="HTTP/1.1 200") {
                 def Curl = "curl -I ${config.ApplicationIP}".execute().text
                 Response = Curl[0..11]
+		println Response
             }    
         }
     }
