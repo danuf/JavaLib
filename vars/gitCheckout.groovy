@@ -17,5 +17,6 @@ def call (Closure body) {
                 url: "${config.GitRepository}" 
             ]]
         ])
+env.shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:\'%h\'").trim()
     }
 }
