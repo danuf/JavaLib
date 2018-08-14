@@ -4,16 +4,16 @@ def call (Closure body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
         body()
-        def Response
+        def response 
         timeout (time: config.TimeOutCheck, unit:'SECONDS') { 
             echo 'Check Successful docker container Up'
             sleep 10
-            while(Response!="HTTP/1.1 200") {
-                def Curl = "curl -I ${config.ApplicationIP}".execute().text
-                Response = Curl[0..11]
-		println Response
+            while(response!="HTTP/1.1 200") {
+                def curl = "curl -I ${config.ApplicationIP}".execute().text
+                response = Curl[0..11]
+		println response
             }    
         }
     }
-return Response
+return response
 }
