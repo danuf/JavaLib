@@ -12,7 +12,8 @@ def call (Closure body) {
                 def Curl = "curl -I ${config.ApplicationIP}".execute().text
                 Response = Curl[0..11]
 		println Response
-            }    
+            }
+	return Response    
         }
     }
 }
