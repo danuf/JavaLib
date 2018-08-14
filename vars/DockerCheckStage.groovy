@@ -1,3 +1,13 @@
+/*
+DockerCheckStage (health check your container)
+
+@param TimeOutCheck
+@param ApplicationIP // Link to your application
+
+@version 1.0
+@copyright 2018, EPAM systems, All Rights Reserved
+*/
+
 def call (Closure body) {
     stage('Docker Check Stage') {
         def config = [:]
@@ -14,6 +24,6 @@ def call (Closure body) {
 		println response
             }     
         }
-    	return response
+        return response
     }
 }

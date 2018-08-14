@@ -1,3 +1,13 @@
+/*
+cleanUp
+
+@param DockerContainerName 
+@param DockerImageName
+
+@version 1.0
+@copyright 2018, EPAM systems, All Rights Reserved
+
+*/
 def call (Closure body) {
     stage('cleanup Stage') {
         def config = [:]

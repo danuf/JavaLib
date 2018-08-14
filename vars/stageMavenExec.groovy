@@ -1,18 +1,18 @@
 import com.lab.build.Colorizer
 
-/**
- * stageMavenExec
- *
- * Execute Maven commands (build, upload, etc) with custom parameters
- *
- * @param jdkVersion
- * @param mavenVersion
- * @param jvmOptions
- * @param mavenCommand
- *
- * @version $Id: $
- * @copyright 2018, EPAM systems, All Rights Reserved
- */
+/*
+stageMavenExec
+ 
+Execute Maven commands (build, upload, etc) with custom parameters
+ 
+@param jdkVersion
+@param mavenVersion
+@param jvmOptions
+@param mavenCommand
+ 
+@version 1.0
+@copyright 2018, EPAM systems, All Rights Reserved
+*/
 
 def call(Closure body) {
     stage ('Execute Maven') {

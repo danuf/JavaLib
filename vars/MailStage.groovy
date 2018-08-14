@@ -1,3 +1,13 @@
+/*
+MailStage (Email Notification by emailext)
+
+@param Recipient // Email address 
+@param Check // Health status returned by DockerCheckStage
+
+@version 1.0
+@copyright 2018, EPAM systems, All Rights Reserved
+*/
+
 def call(Closure body) {
     stage ('Send Email') {
         def config = [:]
