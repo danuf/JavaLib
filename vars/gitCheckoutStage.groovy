@@ -1,5 +1,5 @@
 /*
-gitCheckout
+gitCheckoutStage
 
 @param BranchName // Name of targeted branch
 @param SubmoduleConfig // True or false

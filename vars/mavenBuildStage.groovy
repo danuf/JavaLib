@@ -1,7 +1,7 @@
 import com.lab.build.Colorizer
 
 /*
-stageMavenExec
+mavenBuildStage
  
 Execute Maven commands (build, upload, etc) with custom parameters
  

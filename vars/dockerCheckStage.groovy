@@ -1,5 +1,5 @@
 /*
-DockerCheckStage (health check your container)
+dockerCheckStage (health check your container)
 
 @param TimeOutCheck
 @param ApplicationIP // Link to your application

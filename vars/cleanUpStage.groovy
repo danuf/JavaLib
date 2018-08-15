@@ -1,5 +1,5 @@
 /*
-cleanUp
+cleanUpStage
 
 @param DockerContainerName 
 @param DockerImageName

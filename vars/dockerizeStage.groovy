@@ -1,5 +1,5 @@
 /*
-DockerizeStage
+dockerizeStage
 
 Execute docker comands (build and run) with custom parameters
 

@@ -1,5 +1,5 @@
 /*
-MailStage (Email Notification by emailext)
+emailStage (Email Notification by emailext)
 
 @param Recipient // Email address 
 @param Check // Health status returned by DockerCheckStage
