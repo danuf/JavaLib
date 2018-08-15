@@ -1,10 +1,10 @@
 /*
 stageGitCheckout
 
-@param BranchName // Name of targeted branch
-@param SubmoduleConfig // True or false
-@param CredentialsID // Your credentials
-@param GitRepository // Link to your repo
+@param branchName // Name of targeted branch
+@param submoduleConfig // True or false
+@param credentialsID // Your credentials
+@param gitRepository // Link to your repo
 
 @version 1.0
 @copyright 2018, EPAM systems, All Rights Reserved
@@ -19,13 +19,13 @@ def call (Closure body) {
         body()
         
         checkout([$class: 'GitSCM',
-            branches: [[name: "${config.BranchName}"]],
+            branches: [[name: "${config.branchName}"]],
             doGenerateSubmoduleConfigurations: config.SubmoduleConfig,
             extensions: [],
             submoduleCfg: [],
             userRemoteConfigs: [[
-                credentialsId: "${config.CredentialsID}" , 
-                url: "${config.GitRepository}" 
+                credentialsId: "${config.credentialsID}" , 
+                url: "${config.gitRepository}" 
             ]]
         ])
         env.shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:\'%h\'").trim()
