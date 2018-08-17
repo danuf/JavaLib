@@ -20,7 +20,7 @@ def call (Closure body) {
         body()
     
         withSonarQubeEnv("${config.sonarName}") {
-            sh "${config.sonarHome}/bin/sonar-scanner ${config.sonarKey} ${config.sonarProj} ${config.sonarbinaries} ${config.sonarSource}"
+            sh "${config.sonarHome}/bin/sonar-scanner -Dsonar.projectKey=${config.sonarKey} -Dsonar.projectName=${config.sonarProj} -Dsonar.java.binaries=${config.sonarbinaries} -Dsonar.sources=${config.sonarSource}"
         }
     }
 }
