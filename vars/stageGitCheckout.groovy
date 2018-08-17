@@ -20,8 +20,9 @@ def call (Closure body) {
         
         checkout([$class: 'GitSCM',
             branches: [[name: "${config.branchName}"]],
-            doGenerateSubmoduleConfigurations: config.SubmoduleConfig,
-            extensions: [],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [[$class: 'RelativeTargetDirectory',
+                relativeTargetDir: "${config.RemoteTargetDir}"]],
             submoduleCfg: [],
             userRemoteConfigs: [[
                 credentialsId: "${config.credentialsID}" , 
